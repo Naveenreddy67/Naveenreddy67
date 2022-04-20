@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+    <script>
+        var usersList = localStorage.getItem("globalObject");
+        usersList = JSON.parse(usersList);
+        usersList.forEach(function (user) {
+            console.log(user.firstName);
+        });
+
+        function login() {
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            var status = false;
+            usersList.forEach(function (user) {
+                if (user.firstName == userName && user.password == password) {
+                    status = true;
+                }
+            });
+            if (status == true) {
+                window.location.assign("../User.html")
+            } else {
+                alert("Wrong Details");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="register-photo bg-cover">
+        <div class="form-container ">
+                <h2 class="text-center"><strong>Welcome back!</strong></h2>
+                <div class="form-group">
+                    <input class="form-control" id="userName" type="userName" name="userName" placeholder="Username" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="password" type="password" name="password" placeholder="Password" />
+                </div>
+                <div class="form-group">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <a href="register.html" class="text-info">New User? Register Here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-block btn-info" type="submit" onclick="login()">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/register.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Register</title>
+    <script src="../main.js" ></script>
+
+</head>
+<body>
+    <div class="col-md-4 col-md-offset-4" id="login">
+        <section id="inner-wrapper" class="login">
+            <article>
+                <form>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"> </i></span>
+                            <input type="firstName" class="form-control" name="firstName" id="firstName" placeholder="First Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"> </i></span>
+                            <input type="lastName" class="form-control" name="lastName" id="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-key"> </i></span>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-key"> </i></span>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                      <button type="submit"  onclick="Register()" class="btn btn-success btn-block">Submit</button>
+                </form>
+            </article>
+        </section></div>
+</body>
+</html>
